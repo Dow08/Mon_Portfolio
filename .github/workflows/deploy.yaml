@@ -1,0 +1,90 @@
+name: Deploy static content to Pages
+name: Deploy and Security Scan
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  security-events: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      
+name: checkout
+      uses: actions/checkout@v4
+
+      
+name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@0.28.0
+      with:
+        scan-type: "fs"
+        scan-ref: "."
+        format: "sarif"
+        output: "trivy-results.sarif"
+        severity: "CRITICAL,HIGH,MEDIUM"
+name: Upload Trivy scan results to GitHub Security tab
+    uses: github/codeql-action/upload-sarif@v3
+    with:
+      sarif_file: "trivy-results.sarif"
+lint-html:
+  runs-on: ubuntu-latest
+  steps:
+name: Checkout
+    uses: actions/checkout@v4
+
+      
+name: Install HTMLHint
+      run: npm install -g htmlhint
+
+      
+name: Run HTMLHint
+      run: htmlhint "*.html"
+
+  lint-python:
+    runs-on: ubuntu-latest
+    steps:
+      
+name: Checkout
+      uses: actions/checkout@v4
+
+      
+name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+      
+name: Install flake8
+      run: pip install flake8
+
+      
+name: Run flake8
+      run: flake8 . --max-line-length=120 --ignore=E501
+deploy:
+  needs: [security-scan, lint-html, lint-python]
+  environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+  runs-on: ubuntu-latest
+  steps:
+name: Checkout
+    uses: actions/checkout@v4
+name: Setup Pages
+  uses: actions/configure-pages@v5
+name: Upload artifact
+uses: actions/upload-pages-artifact@v3
+with:
+  path: '.'
+name: Deploy to GitHub Pages
+uses: actions/deploy-pages@v4
