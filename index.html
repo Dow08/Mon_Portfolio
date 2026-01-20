@@ -1,115 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Professional</title>
+    <meta name="description" content="Portfolio de Poncelet Dorian - Administrateur Système & Cybersécurité">
+    <title>Poncelet Dorian | Cybersécurité</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <canvas id="matrix-canvas"></canvas>
 
-    <div class="monitor">
-        <div class="pulse"></div>
-        <span>System monitoring active</span>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <!-- Aurora Orbs -->
+        <div class="aurora-orb aurora-orb-1"></div>
+        <div class="aurora-orb aurora-orb-2"></div>
+        <div class="aurora-orb aurora-orb-3"></div>
+        <div class="aurora-orb aurora-orb-4"></div>
+
+        <!-- Particle Canvas -->
+        <canvas id="particles-canvas"></canvas>
+
+        <!-- Grid Overlay -->
+        <div class="grid-overlay"></div>
+
+        <!-- Floating Decorative Elements -->
+        <div class="floating-elements">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="floating-shape shape-5"></div>
+            <div class="floating-shape shape-ring"></div>
+            <div class="floating-shape shape-ring shape-ring-2"></div>
+        </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">
-            <div class="glow"></div>
-            <div class="avatar">
-                <img src="./assets/images/cyber-shield.png" alt="Cyber Shield"
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-            </div>
-            <h1 class="title">Poncelet Dorian</h1>
-            <div class="subtitle">Administrateur Système & Cybersécurité</div>
-            <div class="badge-container">
-                <div class="badge">Cybersecurity</div>
-                <div class="badge">DevSecOps</div>
-                <div class="badge">Cloud</div>
-            </div>
-        </div>
+    <!-- Navigation Capsule -->
+    <nav class="nav-capsule">
+        <a href="#" class="nav-link active" data-page="home">
+            <i class="fas fa-home"></i><span>Accueil</span>
+        </a>
+        <a href="#" class="nav-link" data-page="projects">
+            <i class="fas fa-rocket"></i><span>Projets</span>
+        </a>
+        <a href="#" class="nav-link" data-page="skills">
+            <i class="fas fa-cogs"></i><span>Compétences</span>
+        </a>
+        <a href="#" class="nav-link" data-page="contact">
+            <i class="fas fa-envelope"></i><span>Contact</span>
+        </a>
+    </nav>
 
-        <div class="card-body">
-            <p class="bio">
-                Spécialisé dans la sécurisation des infrastructures, la détection des menaces, la réponse aux incidents
-                et le consulting en cybersécurité pour les environnements professionnels.
-            </p>
+    <!-- Pages Container -->
+    <div class="pages-container">
 
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">99.9%</div>
-                    <div class="stat-label">Uptime</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">15min</div>
-                    <div class="stat-label">Response Time</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">200+</div>
-                    <div class="stat-label">Systems Managed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">350+</div>
-                    <div class="stat-label">Threats Mitigated</div>
-                </div>
-            </div>
-
-            <!-- Journey Section -->
-            <div class="journey reveal">
-                <h3 class="journey-title">Chef d'Entreprise à Expert Cyber</h3>
-                <p class="journey-text">
-                    À 39 ans, j'ai décidé de transformer ma passion de toujours en métier. Autodidacte depuis plus de 25
-                    ans (Hardware, Software), je n'ai jamais été loin d'un ordinateur.
-                    <br><br>
-                    Fort d'une expérience de + de 12 ans dans le commerce et chef d'entreprise, j'apporte aujourd'hui
-                    une double compétence rare : la compréhension des enjeux business critiques et la technicité acquise
-                    lors de ma formation en autodidacte et intensive Fullstack Cybersécurité chez Jedha notamment.
-                </p>
-                <div class="journey-stats">
-                    <div class="j-stat">
-                        <span class="accent">25+ Ans</span> de passion Informatique
+        <!-- HOME PAGE -->
+        <section id="page-home" class="page-section active">
+            <div class="page-content">
+                <div class="home-content">
+                    <div class="hero-avatar">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-ring avatar-ring-2"></div>
+                        <div class="avatar-main">
+                            <img src="./assets/images/cyber-shield.png" alt="Cyber Shield">
+                        </div>
                     </div>
-                    <div class="j-stat">
-                        <span class="accent">12+ Ans</span> Entrepreneuriat & Commerce
+
+                    <h1 class="hero-name">Poncelet Dorian</h1>
+                    <div class="hero-title">Administrateur Système & Cybersécurité</div>
+
+                    <p class="hero-bio">
+                        Spécialisé dans la sécurisation des infrastructures, la détection des menaces
+                        et la réponse aux incidents pour les environnements professionnels.
+                    </p>
+
+                    <div class="hero-badges">
+                        <span class="hero-badge">Cybersecurity</span>
+                        <span class="hero-badge">DevSecOps</span>
+                        <span class="hero-badge">Cloud</span>
+                    </div>
+
+                    <div class="hero-stats" id="hero-stats">
+                        <!-- Rendered by JS -->
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#" class="cta-btn cta-primary" data-page="projects">
+                            <i class="fas fa-rocket"></i> Voir mes projets
+                        </a>
+                        <a href="#" class="cta-btn cta-secondary" data-page="contact">
+                            <i class="fas fa-envelope"></i> Me contacter
+                        </a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="btn-container">
-                <div style="display: flex; gap: 0.5rem;">
-                    <a href="mailto:Dow@ikmail.com" class="btn btn-primary" style="flex: 1;">Contactez-moi</a>
-                    <button id="copy-email" class="btn btn-secondary"
-                        style="width: 50px; display: flex; align-items: center; justify-content: center;"
-                        title="Copier l'email">
-                        <i class="fas fa-copy"></i>
-                    </button>
+        <!-- PROJECTS PAGE -->
+        <section id="page-projects" class="page-section">
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Mes Projets</h1>
+                    <p class="page-subtitle">
+                        Découvrez mes réalisations en cybersécurité, développement et automatisation
+                    </p>
                 </div>
-                <a href="./assets/documents/C.V.pdf" download="CV_Poncelet_Dorian.pdf"
-                    class="btn btn-secondary">Télécharger le CV</a>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Rendered by JS -->
+                </div>
             </div>
-        </div>
+        </section>
 
+        <!-- SKILLS PAGE -->
+        <section id="page-skills" class="page-section">
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Compétences</h1>
+                    <p class="page-subtitle">
+                        Mes domaines d'expertise technique acquis par la formation et la pratique
+                    </p>
+                </div>
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
 
-    </div>
+        <!-- CONTACT PAGE -->
+        <section id="page-contact" class="page-section">
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Contact</h1>
+                    <p class="page-subtitle">
+                        Restons en contact pour discuter cybersécurité et opportunités
+                    </p>
+                </div>
+                <div class="contact-grid" id="contact-grid">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
 
-    <div class="footer">
-        <a href="https://github.com/Dow08" target="_blank" rel="noopener noreferrer" class="social-link"><i
-                class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/dorian-poncelet-1807612b5" target="_blank" rel="noopener noreferrer"
-            class="social-link"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/Dow163877" target="_blank" rel="noopener noreferrer" class="social-link"><i
-                class="fab fa-twitter"></i></a>
     </div>
 
     <!-- Toast Notification -->
     <div id="toast" class="toast">
-        <i class="fas fa-check-circle"></i> Email copié !
+        <i class="fas fa-check-circle"></i>
+        <span>Action effectuée !</span>
     </div>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script src="script.js"></script>
 </body>
