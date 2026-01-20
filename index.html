@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,18 @@
         :root {
             --background: #0f0f11;
             --text: #ffffff;
-            --accent: #00f0ff;
+            --accent: #00ff46;
             --surface: #1a1a1f;
             --surface-hover: #25252d;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', system-ui, sans-serif;
         }
-        
+
         body {
             background-color: var(--background);
             color: var(--text);
@@ -31,7 +32,7 @@
             line-height: 1.6;
             padding: 2rem;
         }
-        
+
         .card {
             background-color: var(--surface);
             max-width: 500px;
@@ -40,13 +41,13 @@
             overflow: hidden;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
-        
+
         .card-header {
             padding: 2rem;
             text-align: center;
             position: relative;
         }
-        
+
         .glow {
             position: absolute;
             top: 0;
@@ -60,11 +61,11 @@
             opacity: 0.5;
             z-index: 0;
         }
-        
+
         .avatar {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 180px;
+            height: 180px;
             margin: 0 auto 1.5rem;
             background-color: var(--surface-hover);
             border-radius: 50%;
@@ -75,7 +76,7 @@
             color: var(--accent);
             z-index: 1;
         }
-        
+
         .title {
             position: relative;
             font-size: 1.8rem;
@@ -83,7 +84,7 @@
             margin-bottom: 0.5rem;
             z-index: 1;
         }
-        
+
         .subtitle {
             position: relative;
             color: var(--accent);
@@ -94,7 +95,7 @@
             margin-bottom: 1rem;
             z-index: 1;
         }
-        
+
         .badge-container {
             display: flex;
             justify-content: center;
@@ -103,33 +104,33 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .badge {
-            background-color: rgba(0, 240, 255, 0.1);
+            background-color: rgba(0, 255, 70, 0.1);
             color: var(--accent);
             padding: 0.4rem 0.8rem;
             border-radius: 50px;
             font-size: 0.75rem;
             font-weight: 500;
         }
-        
+
         .card-body {
             padding: 0 2rem 2rem;
         }
-        
+
         .bio {
             text-align: center;
             margin-bottom: 2rem;
             color: rgba(255, 255, 255, 0.8);
         }
-        
+
         .stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-bottom: 2rem;
         }
-        
+
         .stat-card {
             background-color: var(--surface-hover);
             padding: 1.5rem;
@@ -137,31 +138,31 @@
             text-align: center;
             transition: transform 0.2s ease;
         }
-        
+
         .stat-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .stat-number {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--accent);
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-label {
             font-size: 0.8rem;
             color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .btn-container {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
-        
+
         .btn {
             display: block;
             padding: 1rem;
@@ -172,35 +173,35 @@
             text-decoration: none;
             transition: all 0.2s ease;
         }
-        
+
         .btn-primary {
             background-color: var(--accent);
             color: var(--background);
         }
-        
+
         .btn-primary:hover {
             opacity: 0.9;
             transform: translateY(-2px);
         }
-        
+
         .btn-secondary {
             background-color: rgba(255, 255, 255, 0.08);
             color: var(--text);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.12);
             transform: translateY(-2px);
         }
-        
+
         .footer {
             margin-top: 2rem;
             display: flex;
             justify-content: center;
             gap: 1rem;
         }
-        
+
         .social-link {
             width: 40px;
             height: 40px;
@@ -213,7 +214,7 @@
             font-size: 1.2rem;
             transition: all 0.2s ease;
         }
-        
+
         .social-link:hover {
             background-color: var(--accent);
             color: var(--background);
@@ -221,15 +222,21 @@
         }
 
         .monitor {
-            position: absolute;
-            bottom: 1rem;
-            right: 1rem;
+            position: fixed;
+            top: 1rem;
+            right: 1.5rem;
             font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.6);
             display: flex;
             align-items: center;
+            z-index: 1000;
+            background: rgba(15, 15, 17, 0.6);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(0, 255, 70, 0.1);
         }
-        
+
         .pulse {
             width: 8px;
             height: 8px;
@@ -238,22 +245,24 @@
             margin-right: 0.5rem;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
             0% {
                 transform: scale(0.8);
                 opacity: 0.7;
             }
+
             50% {
                 transform: scale(1);
                 opacity: 1;
             }
+
             100% {
                 transform: scale(0.8);
                 opacity: 0.7;
             }
         }
-        
+
         /* Matrix effect */
         #matrix-canvas {
             position: fixed;
@@ -263,55 +272,146 @@
             height: 100%;
             z-index: -1;
         }
-        
+
+        /* Journey Section */
+        .journey {
+            margin-bottom: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 70, 0.1);
+            padding-top: 2rem;
+        }
+
+        .journey-title {
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .journey-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .journey-stats {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .j-stat {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            background: rgba(0, 255, 70, 0.05);
+            padding: 0.8rem;
+            border-radius: 8px;
+            width: 48%;
+        }
+
+        .j-stat .accent {
+            color: var(--accent);
+            font-weight: 700;
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Scroll Reveal Effect */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--surface-hover);
+            color: var(--accent);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 1px solid rgba(0, 255, 70, 0.2);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
         @media (max-width: 500px) {
             .title {
                 font-size: 1.5rem;
             }
-            
+
             .avatar {
                 width: 80px;
                 height: 80px;
                 font-size: 2rem;
             }
-            
+
             .card-header {
                 padding: 1.5rem 1.5rem 1rem;
             }
-            
+
             .card-body {
                 padding: 0 1.5rem 1.5rem;
             }
-            
+
             .stat-number {
                 font-size: 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
     <canvas id="matrix-canvas"></canvas>
-    
+
+    <div class="monitor">
+        <div class="pulse"></div>
+        <span>System monitoring active</span>
+    </div>
+
     <div class="card">
         <div class="card-header">
             <div class="glow"></div>
             <div class="avatar">
-                <i class="fas fa-shield-alt"></i>
+                <img src="./assets/images/cyber-shield.png" alt="Cyber Shield"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
             </div>
             <h1 class="title">Poncelet Dorian</h1>
-            <div class="subtitle">Administrateur Système & SOC Analyst</div>
+            <div class="subtitle">Administrateur Système & Cybersécurité</div>
             <div class="badge-container">
                 <div class="badge">Cybersecurity</div>
-                <div class="badge">DevOps</div>
+                <div class="badge">DevSecOps</div>
                 <div class="badge">Cloud</div>
             </div>
         </div>
-        
+
         <div class="card-body">
             <p class="bio">
-                Specialized in securing critical infrastructure, threat detection, and incident response with over 5 years of experience protecting enterprise systems.
+                Spécialisé dans la sécurisation des infrastructures, la détection des menaces, la réponse aux incidents
+                et le consulting en cybersécurité pour les environnements professionnels.
             </p>
-            
+
             <div class="stats">
                 <div class="stat-card">
                     <div class="stat-number">99.9%</div>
@@ -330,69 +430,155 @@
                     <div class="stat-label">Threats Mitigated</div>
                 </div>
             </div>
-            
+
+            <!-- Journey Section -->
+            <div class="journey reveal">
+                <h3 class="journey-title">Chef d'Entreprise à Expert Cyber</h3>
+                <p class="journey-text">
+                    À 39 ans, j'ai décidé de transformer ma passion de toujours en métier. Autodidacte depuis plus de 25
+                    ans (Hardware, Software), je n'ai jamais été loin d'un ordinateur.
+                    <br><br>
+                    Fort d'une expérience de + de 12 ans dans le commerce et chef d'entreprise, j'apporte aujourd'hui
+                    une double compétence rare : la compréhension des enjeux business critiques et la technicité acquise
+                    lors de ma formation en autodidacte et intensive Fullstack Cybersécurité chez Jedha notamment.
+                </p>
+                <div class="journey-stats">
+                    <div class="j-stat">
+                        <span class="accent">25+ Ans</span> de passion Informatique
+                    </div>
+                    <div class="j-stat">
+                        <span class="accent">12+ Ans</span> Entrepreneuriat & Commerce
+                    </div>
+                </div>
+            </div>
+
             <div class="btn-container">
-                <a href="mailto:security@example.com" class="btn btn-primary">Contact Me</a>
-                <a href="#" class="btn btn-secondary">Download Resume</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="mailto:Dow@ikmail.com" class="btn btn-primary" style="flex: 1;">Contactez-moi</a>
+                    <button id="copy-email" class="btn btn-secondary"
+                        style="width: 50px; display: flex; align-items: center; justify-content: center;"
+                        title="Copier l'email">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <a href="./assets/documents/mon_cv.png" download="CV_Poncelet_Dorian.png"
+                    class="btn btn-secondary">Télécharger le CV</a>
             </div>
         </div>
-        
-        <div class="monitor">
-            <div class="pulse"></div>
-            <span>System monitoring active</span>
-        </div>
+
+
     </div>
-    
+
     <div class="footer">
-        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/Dow08" target="_blank" rel="noopener noreferrer" class="social-link"><i
+                class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dorian-poncelet-1807612b5" target="_blank" rel="noopener noreferrer"
+            class="social-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/Dow163877" target="_blank" rel="noopener noreferrer" class="social-link"><i
+                class="fab fa-twitter"></i></a>
     </div>
-    
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i> Email copié !
+    </div>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         // Matrix effect
         const canvas = document.getElementById('matrix-canvas');
         const ctx = canvas.getContext('2d');
-        
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-        
+
         const chars = '01'.split('');
         const fontSize = 14;
-        const columns = canvas.width / fontSize;
-        
-        const drops = [];
-        for (let i = 0; i < columns; i++) {
-            drops[i] = Math.floor(Math.random() * -50);
+        let columns = 0;
+        let drops = [];
+
+        function initDrops() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            columns = canvas.width / fontSize;
+            drops = [];
+            for (let i = 0; i < columns; i++) {
+                drops[i] = Math.floor(Math.random() * -50);
+            }
         }
-        
+
+        initDrops();
+
+        window.addEventListener('resize', initDrops);
+
         function drawMatrix() {
             ctx.fillStyle = 'rgba(15, 15, 17, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            ctx.fillStyle = 'rgba(0, 240, 255, 0.3)';
+
+            ctx.fillStyle = 'rgba(0, 255, 70, 0.3)';
             ctx.font = `${fontSize}px monospace`;
-            
+
             for (let i = 0; i < drops.length; i++) {
                 const text = chars[Math.floor(Math.random() * chars.length)];
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
+
                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                     drops[i] = 0;
                 }
-                
+
                 drops[i]++;
             }
         }
-        
+
         setInterval(drawMatrix, 50);
+
+        // Smart Copy Feature
+        const email = "Dow@ikmail.com";
+        const copyBtn = document.getElementById('copy-email');
+        const toast = document.getElementById('toast');
+
+        if (copyBtn) {
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(email).then(() => {
+                    showToast();
+                }).catch(err => {
+                    console.error('Failed to copy: ', err); // Error handling
+                });
+            });
+        }
+
+        function showToast() {
+            if (toast) { // Safety check
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+        }
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Automatically target important elements
+        const elementsToAnimate = document.querySelectorAll('.card, .card-header > *, .bio, .stat-card, .btn-container > *, .social-link, .journey');
+
+        elementsToAnimate.forEach((el, index) => {
+            el.classList.add('reveal');
+            // Staggered delay for a nice cascading effect
+            el.style.transitionDelay = `${index * 50}ms`;
+            observer.observe(el);
+        });
     </script>
 </body>
+
 </html>
