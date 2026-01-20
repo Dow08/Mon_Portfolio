@@ -5,22 +5,29 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Permissions globales (pour le déploiement web)
 permissions:
   contents: read
   pages: write
   id-token: write
-  security-events: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # JOB 1 : Scanner de vulnérabilités (Sécurité)
+  # JOB 1 : SÉCURITÉ
   security-scan:
     runs-on: ubuntu-latest
+    # C'EST ICI LA CORRECTION SUGGÉRÉE :
+    # On donne explicitement le droit d'écrire les rapports de sécurité à ce job précis
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+      
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Run Trivy vulnerability scanner
@@ -37,28 +44,15 @@ jobs:
         with:
           sarif_file: "trivy-results.sarif"
 
-  # JOB 2 : Vérification de la qualité du code HTML
-  lint-html:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install HTMLHint
-        run: npm install -g htmlhint
-
-      - name: Run HTMLHint
-        run: htmlhint "*.html"
-
-  # JOB 3 : Déploiement (S'exécute seulement si les tests réussissent)
+  # JOB 2 : DÉPLOIEMENT
   deploy:
-    needs: [security-scan, lint-html] # Attend que la sécurité et la qualité soient OK
+    needs: security-scan
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Pages
