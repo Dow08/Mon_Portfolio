@@ -1,0 +1,84 @@
+name: CyberPulse - Mise à jour quotidienne
+
+on:
+  schedule:
+    # Exécution chaque jour à 08:00 UTC
+    - cron: '0 8 * * *'
+  
+  # Permet le déclenchement manuel
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    name: 📰 Génération du Flash Info Cyber
+    runs-on: ubuntu-latest
+    
+    steps:
+      # -----------------------------------------------------------------------
+      # Préparation de l'environnement
+      # -----------------------------------------------------------------------
+      - name: 📥 Récupération du code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Installation de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Installation des dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # -----------------------------------------------------------------------
+      # Génération du contenu
+      # -----------------------------------------------------------------------
+      - name: 🔐 Exécution de CyberPulse
+        env:
+          # Clés API configurées dans les secrets du repository
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          cd src
+          python main.py
+
+      # -----------------------------------------------------------------------
+      # Publication des changements
+      # -----------------------------------------------------------------------
+      - name: 📤 Commit et push des fichiers générés
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # Ajouter les fichiers générés (chemin adapté au portfolio)
+          git add cyber-news/data.json cyber-news/audio/latest_briefing.mp3
+          
+          # Vérifier s'il y a des changements à committer
+          if git diff --staged --quiet; then
+            echo "ℹ️ Aucun changement à committer"
+          else
+            git commit -m "🛡️ Flash info du $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+      # -----------------------------------------------------------------------
+      # Résumé
+      # -----------------------------------------------------------------------
+      - name: ✅ Résumé de l'exécution
+        run: |
+          echo "## 🛡️ CyberPulse - Mise à jour terminée" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Information | Valeur |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 📅 Date | $(date -u +'%Y-%m-%d %H:%M UTC') |" >> $GITHUB_STEP_SUMMARY
+          echo "| ✅ Statut | Succès |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Fichiers générés" >> $GITHUB_STEP_SUMMARY
+          echo "- \`cyber-news/data.json\` - Métadonnées et articles" >> $GITHUB_STEP_SUMMARY
+          echo "- \`cyber-news/audio/latest_briefing.mp3\` - Podcast audio" >> $GITHUB_STEP_SUMMARY

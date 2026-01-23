@@ -52,6 +52,9 @@
         <a href="#" class="nav-link" data-page="contact">
             <i class="fas fa-envelope"></i><span>Contact</span>
         </a>
+        <a href="#" class="nav-link" data-page="cyber-news">
+            <i class="fas fa-satellite-dish"></i><span>Cyber News</span>
+        </a>
     </nav>
 
     <!-- Pages Container -->
@@ -140,6 +143,103 @@
                 </div>
                 <div class="contact-grid" id="contact-grid">
                     <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CYBER NEWS PAGE -->
+        <section id="page-cyber-news" class="page-section">
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Actualités Cyber</h1>
+                    <p class="page-subtitle">
+                        Briefing quotidien automatisé des dernières menaces et actualités cybersécurité
+                    </p>
+                </div>
+
+                <!-- Audio Briefing Card -->
+                <div class="cyber-audio-card" id="cyber-audio-card">
+                    <div class="audio-header">
+                        <div class="audio-badge">
+                            <span class="badge-live"></span>
+                            <span>🔊 Briefing du jour</span>
+                        </div>
+                        <div class="audio-meta" id="audio-meta">
+                            <span id="cyber-update-date">Chargement...</span>
+                        </div>
+                    </div>
+
+                    <!-- Custom Audio Player -->
+                    <div class="custom-audio-player" id="custom-audio-player">
+                        <!-- Hidden native audio element -->
+                        <audio id="cyber-audio-player" aria-label="Lecture du briefing cybersécurité quotidien">
+                            <source src="cyber-news/audio/latest_briefing.mp3" type="audio/mpeg">
+                        </audio>
+
+                        <!-- Waveform Visualizer -->
+                        <div class="audio-visualizer" id="audio-visualizer">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+
+                        <!-- Play Controls -->
+                        <div class="audio-controls">
+                            <button class="audio-btn audio-play-btn" id="audio-play-btn" aria-label="Lecture/Pause">
+                                <i class="fas fa-play" id="play-icon"></i>
+                            </button>
+
+                            <div class="audio-progress-container">
+                                <span class="audio-time" id="audio-current-time">0:00</span>
+                                <div class="audio-progress-bar" id="audio-progress-bar">
+                                    <div class="audio-progress" id="audio-progress"></div>
+                                    <div class="audio-progress-handle" id="audio-progress-handle"></div>
+                                </div>
+                                <span class="audio-time" id="audio-duration">0:00</span>
+                            </div>
+
+                            <div class="audio-volume-container">
+                                <button class="audio-btn audio-volume-btn" id="audio-volume-btn" aria-label="Volume">
+                                    <i class="fas fa-volume-up" id="volume-icon"></i>
+                                </button>
+                                <div class="audio-volume-slider" id="audio-volume-slider">
+                                    <div class="volume-level" id="volume-level"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fallback -->
+                    <div id="audio-fallback" class="audio-fallback" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Audio indisponible - Consultez les actualités ci-dessous</span>
+                    </div>
+                </div>
+
+                <!-- News Grid -->
+                <div class="cyber-news-grid" id="cyber-news-grid">
+                    <!-- Rendered by JS -->
+                    <div class="cyber-loading">
+                        <div class="loading-spinner"></div>
+                        <p>Chargement des actualités...</p>
+                    </div>
+                </div>
+
+                <!-- Script Section -->
+                <div class="cyber-script-section" id="cyber-script-section" style="display: none;">
+                    <h3 class="script-header">
+                        <i class="fas fa-scroll"></i> Script Radio
+                    </h3>
+                    <div id="cyber-script-content" class="cyber-script-content"></div>
                 </div>
             </div>
         </section>

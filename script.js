@@ -41,6 +41,13 @@ const MES_PROJETS = [
         tags: ["CTF", "Writeups", "Exploitation", "Forensics"],
         lien: "https://github.com/Dow08",
         icone: "fas fa-spider"
+    },
+    {
+        titre: "CyberDailyWatch",
+        description: "Agrégateur automatisé d'actualités cybersécurité avec briefings audio générés par IA. Scraping quotidien, résumés GPT et interface web futuriste.",
+        tags: ["Python", "OpenAI", "GitHub Actions", "TTS"],
+        lien: "https://github.com/Dow08/ActuCybersecurite",
+        icone: "fas fa-satellite-dish"
     }
 ];
 
@@ -414,10 +421,20 @@ function renderContact() {
                     `).join('')}
                 </div>
             </div>
+            
+            <div class="cv-download-section">
+                <a href="assets/documents/CV_Poncelet_Dorian.pdf" download class="cv-download-btn">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Télécharger mon CV</span>
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
         </div>
         
         <div class="contact-form-card reveal reveal-delay-1">
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="_subject" value="Nouveau message depuis le Portfolio">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Nom complet" required>
                 </div>
@@ -430,9 +447,9 @@ function renderContact() {
                 <div class="form-group">
                     <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
                 </div>
-                <button type="submit" class="form-btn">
+                <button type="submit" class="form-btn" id="submit-btn">
                     <i class="fas fa-paper-plane"></i>
-                    Envoyer le message
+                    <span>Envoyer le message</span>
                 </button>
             </form>
             <div class="form-footer">
@@ -442,15 +459,243 @@ function renderContact() {
         </div>
     `;
 
-    // Form handler
+    // Form handler with Formspree integration
     const form = document.getElementById('contact-form');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            showToast('Message envoyé avec succès !');
-            form.reset();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.innerHTML;
+
+            // Loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Envoi...</span>';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showToast('✅ Message envoyé avec succès !');
+                    form.reset();
+                } else {
+                    throw new Error('Erreur serveur');
+                }
+            } catch (error) {
+                console.error('Erreur envoi formulaire:', error);
+                showToast('❌ Erreur lors de l\'envoi. Réessayez.');
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
         });
     }
+}
+
+// ========================================
+// 📰 CYBER NEWS RENDERING
+// ========================================
+
+async function renderCyberNews() {
+    const newsGrid = document.getElementById('cyber-news-grid');
+    const audioPlayer = document.getElementById('cyber-audio-player');
+    const audioFallback = document.getElementById('audio-fallback');
+    const updateDate = document.getElementById('cyber-update-date');
+    const scriptSection = document.getElementById('cyber-script-section');
+    const scriptContent = document.getElementById('cyber-script-content');
+
+    if (!newsGrid) return;
+
+    try {
+        // Fetch local data.json
+        const response = await fetch('cyber-news/data.json');
+
+        if (!response.ok) {
+            throw new Error('Données non disponibles');
+        }
+
+        const data = await response.json();
+
+        // DEV LOGS - Cyber Pulse Pipeline
+        console.log('🛡️ [CyberPulse] Données chargées avec succès');
+        console.log('📅 [CyberPulse] Dernière MAJ:', data.generated_at);
+        console.log('📰 [CyberPulse] Articles récupérés:', data.articles?.length || 0);
+        if (data.script) console.log('🎙️ [CyberPulse] Script radio disponible');
+        if (data.audio_file) console.log('🔊 [CyberPulse] Audio briefing:', data.audio_file);
+
+        // Update date
+        if (updateDate && data.generated_at) {
+            const date = new Date(data.generated_at);
+            updateDate.textContent = `Dernière mise à jour : ${date.toLocaleDateString('fr-FR')} à ${date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`;
+        }
+
+        // Render articles
+        if (data.articles && data.articles.length > 0) {
+            newsGrid.innerHTML = data.articles.map((article, index) => `
+                <article class="cyber-news-item reveal" style="transition-delay: ${index * 0.1}s">
+                    <span class="news-item-index">[${String(index + 1).padStart(2, '0')}]</span>
+                    <h3 class="news-item-title">
+                        <a href="${article.url}" target="_blank" rel="noopener noreferrer">
+                            ${article.title_fr || article.title}
+                        </a>
+                    </h3>
+                    <p class="news-item-summary">${article.summary_fr || article.summary}</p>
+                    <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="news-item-link">
+                        <i class="fas fa-external-link-alt"></i> Lire l'article
+                    </a>
+                </article>
+            `).join('');
+
+            // Re-init reveal animations
+            initScrollReveal();
+        } else {
+            newsGrid.innerHTML = `
+                <div class="cyber-error">
+                    <i class="fas fa-database"></i>
+                    <p>Aucune actualité disponible pour le moment</p>
+                </div>
+            `;
+        }
+
+        // Display script if available
+        if (scriptSection && scriptContent && data.script) {
+            scriptSection.style.display = 'block';
+            scriptContent.textContent = data.script;
+        }
+
+    } catch (error) {
+        console.error('Erreur chargement Cyber News:', error);
+        newsGrid.innerHTML = `
+            <div class="cyber-error">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Impossible de charger les actualités</p>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">${error.message}</p>
+            </div>
+        `;
+    }
+
+    // Handle audio fallback
+    if (audioPlayer) {
+        audioPlayer.addEventListener('error', () => {
+            const customPlayer = document.getElementById('custom-audio-player');
+            if (customPlayer) customPlayer.style.display = 'none';
+            if (audioFallback) {
+                audioFallback.style.display = 'flex';
+            }
+        });
+
+        // Initialize custom audio player
+        initCustomAudioPlayer();
+    }
+}
+
+// ========================================
+// 🎵 CUSTOM AUDIO PLAYER
+// ========================================
+
+function initCustomAudioPlayer() {
+    const audio = document.getElementById('cyber-audio-player');
+    const playBtn = document.getElementById('audio-play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const progressBar = document.getElementById('audio-progress-bar');
+    const progress = document.getElementById('audio-progress');
+    const progressHandle = document.getElementById('audio-progress-handle');
+    const currentTimeEl = document.getElementById('audio-current-time');
+    const durationEl = document.getElementById('audio-duration');
+    const volumeBtn = document.getElementById('audio-volume-btn');
+    const volumeIcon = document.getElementById('volume-icon');
+    const volumeSlider = document.getElementById('audio-volume-slider');
+    const volumeLevel = document.getElementById('volume-level');
+    const visualizer = document.getElementById('audio-visualizer');
+
+    if (!audio || !playBtn) return;
+
+    // Format time helper
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    // Play/Pause toggle
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playIcon.className = 'fas fa-pause';
+            visualizer.classList.add('playing');
+        } else {
+            audio.pause();
+            playIcon.className = 'fas fa-play';
+            visualizer.classList.remove('playing');
+        }
+    });
+
+    // Update progress bar
+    audio.addEventListener('timeupdate', () => {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progress.style.width = `${percent}%`;
+        progressHandle.style.left = `${percent}%`;
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+
+    // Set duration when loaded
+    audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+
+    // Handle audio end
+    audio.addEventListener('ended', () => {
+        playIcon.className = 'fas fa-play';
+        visualizer.classList.remove('playing');
+        progress.style.width = '0%';
+        progressHandle.style.left = '0%';
+    });
+
+    // Click on progress bar to seek
+    progressBar.addEventListener('click', (e) => {
+        const rect = progressBar.getBoundingClientRect();
+        const percent = (e.clientX - rect.left) / rect.width;
+        audio.currentTime = percent * audio.duration;
+    });
+
+    // Volume control
+    let currentVolume = 0.7;
+    audio.volume = currentVolume;
+    volumeLevel.style.width = `${currentVolume * 100}%`;
+
+    volumeBtn.addEventListener('click', () => {
+        if (audio.volume > 0) {
+            audio.volume = 0;
+            volumeLevel.style.width = '0%';
+            volumeIcon.className = 'fas fa-volume-mute';
+        } else {
+            audio.volume = currentVolume;
+            volumeLevel.style.width = `${currentVolume * 100}%`;
+            volumeIcon.className = 'fas fa-volume-up';
+        }
+    });
+
+    volumeSlider.addEventListener('click', (e) => {
+        const rect = volumeSlider.getBoundingClientRect();
+        const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        audio.volume = percent;
+        currentVolume = percent;
+        volumeLevel.style.width = `${percent * 100}%`;
+
+        if (percent === 0) {
+            volumeIcon.className = 'fas fa-volume-mute';
+        } else if (percent < 0.5) {
+            volumeIcon.className = 'fas fa-volume-down';
+        } else {
+            volumeIcon.className = 'fas fa-volume-up';
+        }
+    });
 }
 
 // ========================================
@@ -498,6 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
     renderSkills();
     renderContact();
+    renderCyberNews();
 
     // Initialize interactions
     initNavigation();
