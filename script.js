@@ -513,7 +513,7 @@ async function renderCyberNews() {
 
     try {
         // Fetch local data.json
-        const response = await fetch('cyber-news/data.json');
+        const response = await fetch('./cyber-news/data.json');
 
         if (!response.ok) {
             throw new Error('Données non disponibles');
