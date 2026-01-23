@@ -1,54 +1,145 @@
-# 🚀 Mon Portfolio | [DOW08]
+# 🛡️ Portfolio Cybersécurité | Poncelet Dorian
 
-> **DEVSECOPS// consulting et cybersécurité**
-> Bienvenue sur mon dépôt vitrine ! Ce projet regroupe mes réalisations, mes compétences et mon parcours.
+[![Deploy Status](https://github.com/Dow08/Mon_Portfolio/actions/workflows/deploy.yaml/badge.svg)](https://github.com/Dow08/Mon_Portfolio/actions/workflows/deploy.yaml)
+[![CyberPulse](https://github.com/Dow08/Mon_Portfolio/actions/workflows/daily_cron.yml/badge.svg)](https://github.com/Dow08/Mon_Portfolio/actions/workflows/daily_cron.yml)
 
-## 🌐 Aperçu du Projet
-Vous pouvez consulter la version en ligne ici :  
-👉 **(https://dow08.github.io/Mon_Portfolio/)** 
+> Portfolio professionnel avec veille cybersécurité automatisée et briefings audio quotidiens générés par IA.
 
----
-
-## 🛠️ Stack Technique
-Voici les technologies que j'utilise pour mes projets :
-
-| Domaine | Technologies |
-| :--- | :--- |
-| **Frontend** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) |
-| **Backend** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **Outils** | ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) |
+🌐 **[Voir le site en ligne](https://dow08.github.io/Mon_Portfolio/)**
 
 ---
 
-## 📂 Contenu du Portfolio
-* **Projets Phares :** Une sélection de mes meilleures réalisations avec liens vers le code source.
-* **Compétences :** Maîtrise des langages et frameworks modernes.
-* **Parcours :** Résumé de mes formations et expériences professionnelles.
-* **Contact :** Formulaire pour me joindre directement.
+## ✨ Fonctionnalités
+
+### 🏠 Portfolio Multi-pages
+- **Accueil** : Présentation avec animation de particules
+- **Projets** : Grille de projets avec tags et liens GitHub
+- **Compétences** : Catégories Cyber, Dev, Infrastructure
+- **Contact** : Formulaire Formspree + Téléchargement CV
+- **Cyber News** : Actualités quotidiennes automatisées
+
+### 🔊 CyberPulse - Veille Automatisée
+Pipeline IA quotidien (08:00 UTC) qui :
+1. Scrape TheHackerNews pour les 3 derniers articles
+2. Traduit en français via GPT/Gemini
+3. Génère un script radio
+4. Synthétise l'audio avec edge-tts
+5. Met à jour le site automatiquement
+
+### 🎨 Design
+- Thème futuriste "Vision 2026"
+- Animations CSS (particules, aurora orbs)
+- Lecteur audio custom avec visualiseur
+- 100% responsive
 
 ---
 
-## 📸 Captures d'écran
-<img width="1145" height="834" alt="{1878A6EC-75F5-4123-A350-8C05D9A5343C}" src="https://github.com/user-attachments/assets/8b0f3ff0-e96d-4ddc-90c5-a725961fca89" />
+## 🚀 Stack Technique
 
+| Catégorie | Technologies |
+|-----------|--------------|
+| Frontend | HTML5, CSS3, JavaScript Vanilla |
+| Backend/Pipeline | Python 3.11, OpenAI/Gemini API |
+| Audio | edge-tts (Microsoft voices) |
+| CI/CD | GitHub Actions |
+| Hosting | GitHub Pages |
+
+---
+
+## 📁 Structure du Projet
+
+```
+├── index.html              # Page principale
+├── style.css               # Styles (40KB, design système)
+├── script.js               # Logique JS (rendu dynamique)
+├── cyber-news/
+│   ├── data.json           # Actualités (généré par IA)
+│   └── audio/
+│       └── latest_briefing.mp3  # Podcast quotidien
+├── src/
+│   ├── main.py             # Orchestrateur pipeline
+│   ├── scraper.py          # Scraping TheHackerNews
+│   └── audio_gen.py        # Génération TTS
+├── assets/
+│   └── documents/
+│       └── CV_Poncelet_Dorian.pdf
+├── .github/workflows/
+│   ├── deploy.yaml         # Déploiement + Trivy scan
+│   └── daily_cron.yml      # Pipeline CyberPulse (08:00 UTC)
+└── requirements.txt        # Dépendances Python
+```
 
 ---
 
-## 📈 Statistiques GitHub
-![Top Langages](https://github-readme-stats.vercel.app/api/top-langs/?username=Dow08&layout=compact&theme=radical)
-![Stats de mon GitHub](https://github-readme-stats.vercel.app/api?username=Dow08&show_icons=true&theme=radical)
+## ⚙️ Configuration
+
+### Secrets GitHub requis
+
+| Secret | Description | Requis |
+|--------|-------------|--------|
+| `OPENAI_API_KEY` | Clé API OpenAI (GPT-4o-mini) | ✅ ou GEMINI |
+| `GEMINI_API_KEY` | Clé API Google Gemini (fallback) | Optionnel |
+
+> ➡️ `Settings > Secrets and variables > Actions > New repository secret`
+
+### Formspree (Formulaire Contact)
+
+1. Créer un formulaire sur [formspree.io](https://formspree.io)
+2. Modifier `script.js` ligne ~435 :
+```javascript
+action="https://formspree.io/f/VOTRE_ID"
+```
 
 ---
 
-## 📫 Me contacter
-* **LinkedIn :** [www.linkedin.com/in/dorian-poncelet-1807612b5]
-* **Email :** [votre.email@exemple.com]
-* **Mon Site :** [votre-site.com]
+## 🔧 Développement Local
+
+```bash
+# Cloner le repo
+git clone https://github.com/Dow08/Mon_Portfolio.git
+cd Mon_Portfolio
+
+# Serveur local
+python -m http.server 8080
+# → http://localhost:8080
+
+# Tester le pipeline (optionnel)
+pip install -r requirements.txt
+cd src && python main.py
+```
 
 ---
-⭐️ *N'hésitez pas à laisser une étoile sur ce dépôt si vous appréciez mon travail !*)
-* **Email :** [Dow@ikmail.com]
-* **Mon Site :** [https://dow08.github.io/Mon_Portfolio/]
+
+## 📊 Workflows GitHub Actions
+
+### 1. Deploy and Security Scan
+- **Déclencheur** : Push sur `main`
+- **Actions** : Trivy scan + Déploiement GitHub Pages
+
+### 2. CyberPulse - Mise à jour quotidienne
+- **Déclencheur** : Cron `0 8 * * *` (08:00 UTC) ou manuel
+- **Actions** : Scraping → Traduction → Script → Audio → Commit
 
 ---
-⭐️ *N'hésitez pas à laisser une étoile sur ce dépôt si vous appréciez mon travail !*
+
+## 🛡️ Sécurité
+
+- ✅ Scan Trivy automatique à chaque déploiement
+- ✅ Secrets via GitHub Secrets (jamais en dur)
+- ✅ `.gitignore` configuré (`.env`, `__pycache__`, etc.)
+- ✅ CSP et attributs `rel="noopener noreferrer"` sur liens externes
+
+---
+
+## 📝 Licence
+
+MIT License - Libre d'utilisation et modification.
+
+---
+
+## 👤 Auteur
+
+**Dorian Poncelet**
+- 🔗 [GitHub](https://github.com/Dow08)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/dorian-poncelet-1807612b5)
+- 🔗 [TryHackMe](https://tryhackme.com/p/seallia81)
