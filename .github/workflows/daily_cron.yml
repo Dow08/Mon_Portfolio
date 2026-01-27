@@ -42,8 +42,8 @@ jobs:
       - name: 🔐 Exécution de CyberPulse
         env:
           # Clés API configurées dans les secrets du repository
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPEN_AI_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_KEY }}
         run: |
           cd src
           python main.py
