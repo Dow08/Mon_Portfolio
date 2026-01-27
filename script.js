@@ -534,6 +534,17 @@ async function renderCyberNews() {
             updateDate.textContent = `Dernière mise à jour : ${date.toLocaleDateString('fr-FR')} à ${date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`;
         }
 
+        // 🎵 FORCE AUDIO UPDATE (Cache Busting)
+        if (data.audio_file && audioPlayer) {
+            // Construit le chemin avec un timestamp pour éviter le cache navigateur
+            // data.audio_file est relatif (ex: "audio/latest_briefing.mp3")
+            const audioPath = `./cyber-news/${data.audio_file}?t=${new Date().getTime()}`;
+            console.log('🔊 [CyberPulse] Updating audio source:', audioPath);
+            
+            audioPlayer.src = audioPath;
+            audioPlayer.load(); // Force le rechargement du flux
+        }
+
         // Render articles
         if (data.articles && data.articles.length > 0) {
             newsGrid.innerHTML = data.articles.map((article, index) => `
