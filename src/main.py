@@ -352,7 +352,8 @@ def main():
         print(f"🤖 Provider IA configuré: {provider.upper()}")
     except ValueError as e:
         print(e)
-        return
+        import sys
+        sys.exit(1)
     print()
     
     # -------------------------------------------------------------------------
