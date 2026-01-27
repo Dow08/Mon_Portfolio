@@ -144,23 +144,20 @@ def call_ai(system_prompt: str, user_prompt: str, temperature: float = 0.7, max_
     # ==========================================================================
     # FALLBACK GEMINI
     # ==========================================================================
-    # ==========================================================================
-    # FALLBACK GEMINI
-    # ==========================================================================
     gemini_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if gemini_key:
         try:
-            from google import genai
+            import google.generativeai as genai
             
-            client = genai.Client(api_key=gemini_key)
+            genai.configure(api_key=gemini_key)
+            model = genai.GenerativeModel(GEMINI_MODEL)
             
-            # Pas de "system prompt" séparé dans l'appel standard simple, on combine
+            # Gemini n'a pas de "system prompt" séparé, on combine
             full_prompt = f"{system_prompt}\n\n{user_prompt}"
             
-            response = client.models.generate_content(
-                model=GEMINI_MODEL,
-                contents=full_prompt,
-                config=genai.types.GenerateContentConfig(
+            response = model.generate_content(
+                full_prompt,
+                generation_config=genai.types.GenerationConfig(
                     temperature=temperature,
                     max_output_tokens=max_tokens
                 )
