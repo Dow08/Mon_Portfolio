@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-10-26T14:42:08+00:00",
+  "generated_at": "2026-10-27T13:47:41+00:00",
   "source": {
     "name": "The Hacker News",
     "url": "https://thehackernews.com",
@@ -8,33 +8,33 @@
   },
   "articles": [
     {
-      "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
-      "url": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
-      "summary": "Two critical flaws in Wasmtime, a WebAssembly runtime that can be built into other software, could allow a malicious WebAssembly module to escape the sandbox intended to contain it, the project's maintainers say. An attacker would first need a vulnerable Wasmtime build to compile a module they control, and one of the flaws affects only ARM64 systems. Fixed versions were released on",
-      "title_fr": "Deux failles critiques de Wasmtime pourraient permettre à des modules WebAssembly malveillants d'échapper aux sandboxes",
-      "summary_fr": "Deux failles critiques dans Wasmtime, un runtime WebAssembly, pourraient permettre à un module malveillant d'échapper à sa sandbox. Un attaquant aurait besoin d'une version vulnérable de Wasmtime pour compiler un module qu'il contrôle, et l'une des failles n'affecte que les systèmes ARM64.",
-      "published": "Mon, 26 Oct 2026 17:22:41 +0530"
+      "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
+      "url": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
+      "summary": "Microsoft has fixed a flaw in its Authenticator app for Android that let a malicious app with no permissions pose as a trusted Microsoft app, such as Teams, and collect sign-in tokens for a victim's work account. Microsoft tracks the flaw as CVE-2026-80097 and fixed it in Authenticator for Android version 6.2606.4246, so anyone using the app should update. In the researchers' tests,",
+      "title_fr": "Une faille de Microsoft Authenticator permettait à des applications Android sans permission de voler des jetons de compte professionnel",
+      "summary_fr": "Microsoft a corrigé une faille dans son application Authenticator pour Android qui permettait à une application malveillante sans permissions de se faire passer pour une application Microsoft fiable et de collecter des jetons de connexion. La faille, suivie sous le nom de CVE-2026-80097, a été corrigée dans la version 6.2606.4246 d'Authenticator pour Android, et les utilisateurs sont invités à mettre à jour leur application.",
+      "published": "Tue, 27 Oct 2026 17:39:50 +0530"
     },
     {
-      "title": "Between alerts: What Attackers Do in the Spaces Ordinary Detection Misses",
-      "url": "https://thehackernews.com/2026/10/between-alerts-what-attackers-do-in.html",
-      "summary": "Every SOC struggles with a pile of alerts. Very few of those alerts explain how an attack started or how it progressed. Network data, like that from a network detection and response (NDR) platform, connects individual alerts into one timeline, and it feeds the defensive systems that can tie all events together into one coordinated view. SOC teams often first see the shape of an intrusion",
-      "title_fr": "Entre les alertes : ce que font les attaquants dans les espaces que la détection ordinaire manque",
-      "summary_fr": "Chaque SOC est confronté à une multitude d'alertes, dont très peu expliquent le début ou la progression d'une attaque. Les données réseau, comme celles d'une plateforme NDR, relient les alertes individuelles en une seule chronologie et alimentent les systèmes défensifs.",
-      "published": "Mon, 26 Oct 2026 16:53:56 +0530"
+      "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
+      "url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+      "summary": "An attacker who gained access to Keystone's website obtained the key that its hardware wallets use to prove they are genuine, the company said in a statement on October 26. Someone with that key could build counterfeit devices that pass the online check owners use to verify a Keystone. A buyer who trusted a counterfeit could have their crypto stolen, but the incident did not involve",
+      "title_fr": "Keystone va détruire 18 835 portefeuilles matériels après le vol de la clé de vérification de l'appareil par des pirates",
+      "summary_fr": "Un attaquant a obtenu la clé de vérification des portefeuilles matériels de Keystone après avoir accédé à son site web. Cette clé pourrait permettre de créer des appareils contrefaits qui passeraient la vérification en ligne, exposant les acheteurs au risque de vol de cryptomonnaie.",
+      "published": "Tue, 27 Oct 2026 17:16:00 +0530"
     },
     {
-      "title": "uCreator Android Spyware Can Steal Telegram 2FA Passwords and Clone WeChat Accounts",
-      "url": "https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html",
-      "summary": "A rentable Android spyware kit called uCreator takes over Telegram and WeChat accounts by hiding its code inside working copies of the two apps, researcher Ovi found. It only reaches people who install one of these tampered copies, spread outside the official app stores, or who run WeChat inside the kit makers' own container app. The kit's Telegram part matches Baohuo, a backdoor that Doctor",
-      "title_fr": "Le logiciel espion Android uCreator peut voler les mots de passe 2FA de Telegram et cloner les comptes WeChat",
-      "summary_fr": "Un kit de logiciel espion Android louable nommé uCreator prend le contrôle des comptes Telegram et WeChat en cachant son code dans des copies fonctionnelles des deux applications. Il cible les utilisateurs qui installent ces copies modifiées, diffusées en dehors des magasins d'applications officiels, ou qui exécutent WeChat dans l'application conteneur des créateurs du kit.",
-      "published": "Mon, 26 Oct 2026 15:24:02 +0530"
+      "title": "AI-Generated Fake Login Pages Are Making Account Takeovers Easier",
+      "url": "https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html",
+      "summary": "Fake login pages are nothing new, but generative AI is making them easier to build and more convincing. Attackers can recreate familiar login screens, impersonate trusted brands and tailor phishing attempts to specific employees or organizations. Some fake login pages go beyond stealing passwords. They can also capture MFA codes or hijack authenticated sessions, allowing attackers to gain",
+      "title_fr": "Les fausses pages de connexion générées par l'IA facilitent les prises de contrôle de compte",
+      "summary_fr": "Les pages de connexion factices, améliorées par l'IA générative, sont plus faciles à créer et plus convaincantes, permettant aux attaquants d'imiter des marques et de cibler des employés. Certaines de ces pages peuvent non seulement voler des mots de passe, mais aussi capturer des codes MFA ou détourner des sessions authentifiées.",
+      "published": "Tue, 27 Oct 2026 17:02:46 +0530"
     }
   ],
-  "script": "Flash Info Cyber, bonjour à toutes et à tous. Un point rapide sur les dernières menaces qui pèsent sur nos systèmes. Restez à l'écoute.  Tout d'abord, une mise en garde concernant Wasmtime. Deux vulnérabilités majeures ont été découvertes dans ce moteur d'exécution WebAssembly. Elles pourraient permettre à des programmes malveillants de contourner les mesures de sécurité et d'accéder à des zones normalement protégées. Soyez particulièrement vigilants si vous utilisez Wasmtime, surtout sur les systèmes ARM64, et assurez-vous de disposer des dernières mises à jour. Ensuite, un rappel important pour les équipes de sécurité. Face à l'avalanche d'alertes quotidiennes, il est crucial de ne pas perdre de vue le fil conducteur d'une attaque. Les données de trafic réseau, souvent négligées, sont essentielles pour relier les événements isolés et comprendre la progression des menaces. Elles permettent de construire une chronologie complète et d'alimenter efficacement les outils de défense. Enfin, attention à un nouveau logiciel espion Android nommé uCreator. Ce programme malveillant est capable de dérober vos mots de passe à double authentification sur Telegram et même de cloner vos comptes WeChat. Il se propage via des versions modifiées de ces applications, souvent téléchargées en dehors des plateformes officielles. Ne téléchargez jamais d'applications depuis des sources inconnues et privilégiez toujours les magasins officiels. Restez vigilants. C'était le Flash Info Cyber. À bientôt.",
+  "script": "Bonjour et bienvenue à votre Flash Info Cyber. Aujourd'hui, nous faisons le point sur les dernières menaces qui pèsent sur votre sécurité numérique. Commençons par une alerte concernant Microsoft Authenticator. Une vulnérabilité a été découverte dans l'application Android, permettant à des applications malveillantes, même sans permissions spécifiques, de se faire passer pour des applications Microsoft légitimes. Elles pouvaient ainsi subtiliser vos jetons de connexion professionnels. Microsoft a heureusement corrigé cette faille dans la version 6.2606.4246, il est donc crucial de mettre à jour votre application sans tarder. Passons ensuite aux portefeuilles matériels, un domaine où la confiance est primordiale. Le fabricant Keystone a malheureusement été victime d'une cyberattaque. Des pirates ont réussi à dérober la clé de vérification de leurs appareils. Cette clé pourrait être utilisée pour fabriquer de faux portefeuilles qui passeraient les contrôles d'authenticité, exposant les utilisateurs à un risque de vol de cryptomonnaies. Keystone a pris la décision radicale de détruire près de 19 000 portefeuilles existants pour garantir la sécurité de ses clients. Enfin, l'intelligence artificielle générative entre en jeu dans les techniques de phishing. Des pages de connexion factices, plus vraies que nature, sont désormais créées avec une facilité déconcertante grâce à l'IA. Ces imitations parfaites de sites web légitimes sont conçues pour voler vos identifiants, mais aussi, dans certains cas, vos codes d'authentification multifacteur ou même détourner vos sessions actives. Restez vigilants. C'était votre Flash Info Cyber. À très bientôt.",
   "audio_file": "audio/latest_briefing.mp3",
-  "audio_bytes": 712202,
+  "audio_bytes": 790360,
   "ai_providers": {
     "translation": "gemini:gemini-2.5-flash",
     "script": "gemini:gemini-2.5-flash"
