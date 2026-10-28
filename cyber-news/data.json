@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-10-27T13:47:41+00:00",
+  "generated_at": "2026-10-28T14:42:57+00:00",
   "source": {
     "name": "The Hacker News",
     "url": "https://thehackernews.com",
@@ -8,33 +8,33 @@
   },
   "articles": [
     {
-      "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
-      "url": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
-      "summary": "Microsoft has fixed a flaw in its Authenticator app for Android that let a malicious app with no permissions pose as a trusted Microsoft app, such as Teams, and collect sign-in tokens for a victim's work account. Microsoft tracks the flaw as CVE-2026-80097 and fixed it in Authenticator for Android version 6.2606.4246, so anyone using the app should update. In the researchers' tests,",
-      "title_fr": "Une faille de Microsoft Authenticator permettait à des applications Android sans permission de voler des jetons de compte professionnel",
-      "summary_fr": "Microsoft a corrigé une faille dans son application Authenticator pour Android qui permettait à une application malveillante sans permissions de se faire passer pour une application Microsoft fiable et de collecter des jetons de connexion. La faille, suivie sous le nom de CVE-2026-80097, a été corrigée dans la version 6.2606.4246 d'Authenticator pour Android, et les utilisateurs sont invités à mettre à jour leur application.",
-      "published": "Tue, 27 Oct 2026 17:39:50 +0530"
+      "title": "Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch",
+      "url": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html",
+      "summary": "Threat actors are beginning to probe for a newly patched critical vulnerability in Oracle E-Business Suite (EBS), according to threat intelligence firm Defused Cyber. The vulnerability in question is CVE-2026-101767 (CVSS score: 9.8) in the Oracle Application Object Library of Oracle E-Business Suite. It was patched by Oracle last week as part of its Critical Patch Update. Security researchers",
+      "title_fr": "Des hackers ciblent une faille RCE critique dans Oracle E-Business Suite quelques jours après le correctif de sécurité",
+      "summary_fr": "Des acteurs malveillants commencent à sonder une vulnérabilité critique récemment corrigée dans Oracle E-Business Suite (EBS), selon la firme de renseignement sur les menaces Defused Cyber. La vulnérabilité, CVE-2026-101767 (score CVSS : 9.8), se trouve dans l'Oracle Application Object Library d'Oracle E-Business Suite et a été corrigée la semaine dernière dans le cadre de la mise à jour critique d'Oracle.",
+      "published": "Wed, 28 Oct 2026 18:18:03 +0530"
     },
     {
-      "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
-      "url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
-      "summary": "An attacker who gained access to Keystone's website obtained the key that its hardware wallets use to prove they are genuine, the company said in a statement on October 26. Someone with that key could build counterfeit devices that pass the online check owners use to verify a Keystone. A buyer who trusted a counterfeit could have their crypto stolen, but the incident did not involve",
-      "title_fr": "Keystone va détruire 18 835 portefeuilles matériels après le vol de la clé de vérification de l'appareil par des pirates",
-      "summary_fr": "Un attaquant a obtenu la clé de vérification des portefeuilles matériels de Keystone après avoir accédé à son site web. Cette clé pourrait permettre de créer des appareils contrefaits qui passeraient la vérification en ligne, exposant les acheteurs au risque de vol de cryptomonnaie.",
-      "published": "Tue, 27 Oct 2026 17:16:00 +0530"
+      "title": "Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers",
+      "url": "https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html",
+      "summary": "A critical 16-year-old flaw in EDK II, the open-source code that most hardware makers use to build UEFI firmware, can allow an attacker to run code on a machine before its operating system loads, but only while the machine is booting over the network. UEFI firmware is the software that runs first when a computer is switched on, before the operating system. An attacker who can reach the machine",
+      "title_fr": "Une faille UEFI critique vieille de 16 ans peut exécuter du code avant le démarrage sécurisé sur les serveurs démarrant par le réseau",
+      "summary_fr": "Une faille critique vieille de 16 ans dans EDK II, le code open source utilisé par la plupart des fabricants de matériel pour construire le firmware UEFI, peut permettre à un attaquant d'exécuter du code sur une machine avant le chargement de son système d'exploitation. Cela n'est possible que si la machine démarre via le réseau.",
+      "published": "Wed, 28 Oct 2026 17:20:00 +0530"
     },
     {
-      "title": "AI-Generated Fake Login Pages Are Making Account Takeovers Easier",
-      "url": "https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html",
-      "summary": "Fake login pages are nothing new, but generative AI is making them easier to build and more convincing. Attackers can recreate familiar login screens, impersonate trusted brands and tailor phishing attempts to specific employees or organizations. Some fake login pages go beyond stealing passwords. They can also capture MFA codes or hijack authenticated sessions, allowing attackers to gain",
-      "title_fr": "Les fausses pages de connexion générées par l'IA facilitent les prises de contrôle de compte",
-      "summary_fr": "Les pages de connexion factices, améliorées par l'IA générative, sont plus faciles à créer et plus convaincantes, permettant aux attaquants d'imiter des marques et de cibler des employés. Certaines de ces pages peuvent non seulement voler des mots de passe, mais aussi capturer des codes MFA ou détourner des sessions authentifiées.",
-      "published": "Tue, 27 Oct 2026 17:02:46 +0530"
+      "title": "Wazuh and AI for Enhanced SOC Workflows",
+      "url": "https://thehackernews.com/2026/10/wazuh-and-ai-for-enhanced-soc-workflows.html",
+      "summary": "Artificial Intelligence (AI) has become one of this decade's defining technologies. From healthcare and finance to manufacturing and education, organizations increasingly rely on AI to automate repetitive tasks, uncover patterns hidden within large datasets, and support faster decision-making. Cybersecurity has experienced a similar transformation. While attackers employ AI to automate",
+      "title_fr": "Wazuh et l'IA pour des flux de travail SOC améliorés",
+      "summary_fr": "L'intelligence artificielle (IA) est devenue l'une des technologies phares de cette décennie, transformant de nombreux secteurs. La cybersécurité a connu une transformation similaire, où l'IA est utilisée pour automatiser les tâches répétitives et prendre des décisions plus rapides.",
+      "published": "Wed, 28 Oct 2026 17:00:00 +0530"
     }
   ],
-  "script": "Bonjour et bienvenue à votre Flash Info Cyber. Aujourd'hui, nous faisons le point sur les dernières menaces qui pèsent sur votre sécurité numérique. Commençons par une alerte concernant Microsoft Authenticator. Une vulnérabilité a été découverte dans l'application Android, permettant à des applications malveillantes, même sans permissions spécifiques, de se faire passer pour des applications Microsoft légitimes. Elles pouvaient ainsi subtiliser vos jetons de connexion professionnels. Microsoft a heureusement corrigé cette faille dans la version 6.2606.4246, il est donc crucial de mettre à jour votre application sans tarder. Passons ensuite aux portefeuilles matériels, un domaine où la confiance est primordiale. Le fabricant Keystone a malheureusement été victime d'une cyberattaque. Des pirates ont réussi à dérober la clé de vérification de leurs appareils. Cette clé pourrait être utilisée pour fabriquer de faux portefeuilles qui passeraient les contrôles d'authenticité, exposant les utilisateurs à un risque de vol de cryptomonnaies. Keystone a pris la décision radicale de détruire près de 19 000 portefeuilles existants pour garantir la sécurité de ses clients. Enfin, l'intelligence artificielle générative entre en jeu dans les techniques de phishing. Des pages de connexion factices, plus vraies que nature, sont désormais créées avec une facilité déconcertante grâce à l'IA. Ces imitations parfaites de sites web légitimes sont conçues pour voler vos identifiants, mais aussi, dans certains cas, vos codes d'authentification multifacteur ou même détourner vos sessions actives. Restez vigilants. C'était votre Flash Info Cyber. À très bientôt.",
+  "script": "Flash Info Cyber, votre rendez-vous quotidien avec l'actualité de la cybersécurité. Bonjour à toutes et à tous. Des hackers ont rapidement ciblé une faille critique dans Oracle E-Business Suite, quelques jours seulement après la publication d'un correctif. Cette vulnérabilité, notée 9.8 sur l'échelle CVSS, concerne l'Oracle Application Object Library et permettrait l'exécution de code à distance. Les experts en sécurité appellent à une application immédiate des mises à jour pour contrer ces tentatives d'exploitation. Par ailleurs, une vulnérabilité majeure, présente depuis seize ans dans le firmware UEFI, a été découverte. Cette faille affecte l'environnement EDK II, utilisé par la majorité des fabricants, et pourrait permettre l'exécution de code malveillant avant même le démarrage du système d'exploitation, spécifiquement sur les serveurs démarrant par le réseau. Enfin, dans une note plus positive, l'intégration de l'intelligence artificielle, notamment avec des outils comme Wazuh, promet d'améliorer considérablement les flux de travail des centres d'opérations de sécurité, ou SOC. L'IA permet d'automatiser des tâches répétitives et d'accélérer la prise de décision, renforçant ainsi nos défenses numériques. Restez vigilants.",
   "audio_file": "audio/latest_briefing.mp3",
-  "audio_bytes": 790360,
+  "audio_bytes": 604995,
   "ai_providers": {
     "translation": "gemini:gemini-2.5-flash",
     "script": "gemini:gemini-2.5-flash"
