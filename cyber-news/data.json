@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-10-29T14:48:57+00:00",
+  "generated_at": "2026-10-30T14:42:54+00:00",
   "source": {
     "name": "The Hacker News",
     "url": "https://thehackernews.com",
@@ -8,33 +8,33 @@
   },
   "articles": [
     {
-      "title": "Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities",
-      "url": "https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html",
-      "summary": "Google on Wednesday took the wraps off Gemini 4 Carbon, its latest frontier model with state-of-the-art cybersecurity and long-horizon capabilities. \"It shows significant gains across coding and agentic tasks as well as across key capabilities critical for cybersecurity defense, landing a firm lead in SEC-bench Pro (88.2%) for finding vulnerabilities, ExploitGym (54.8%) for exploitation, and",
-      "title_fr": "Gemini 4 Carbon de Google domine les benchmarks pour la découverte, l'exploitation et le patching des vulnérabilités",
-      "summary_fr": "Google a dévoilé mercredi Gemini 4 Carbon, son dernier modèle de pointe doté de capacités avancées en cybersécurité et à long terme. Il affiche des gains significatifs dans les tâches de codage et d'agent, ainsi que dans les capacités essentielles à la défense en cybersécurité, prenant une avance solide dans SEC-bench Pro (88,2 %) pour la découverte de vulnérabilités et ExploitGym (54,8 %) pour l'exploitation.",
-      "published": "Thu, 29 Oct 2026 19:12:40 +0530"
+      "title": "Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis",
+      "url": "https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html",
+      "summary": "A Trezor Safe 5 hardware wallet bought from the reseller CryptoBilis has an extra circuit board that sends out the recovery phrase over a mobile network, a customer has reported. Trezor has not yet examined the device. It is telling everyone who bought a Trezor from CryptoBilis since March 2026 to move their funds to a new wallet with a new recovery phrase. Trezor said in a blog post",
+      "title_fr": "Trezor alerte sur un implant matériel suspecté dans l'un de ses portefeuilles vendus par CryptoBilis",
+      "summary_fr": "Un portefeuille matériel Trezor Safe 5 acheté chez le revendeur CryptoBilis contiendrait une carte de circuit imprimé supplémentaire qui transmet la phrase de récupération via un réseau mobile, selon un client. Trezor, qui n'a pas encore examiné l'appareil, conseille à tous ceux qui ont acheté un Trezor auprès de CryptoBilis depuis mars 2026 de transférer leurs fonds vers un nouveau portefeuille avec une nouvelle phrase de récupération.",
+      "published": "Fri, 30 Oct 2026 17:51:56 +0530"
     },
     {
-      "title": "Webinar: How to Build AI Threat Readiness Into Your Security Operations",
-      "url": "https://thehackernews.com/2026/08/learn-how-to-build-security-operations.html",
-      "summary": "Security teams have spent years trying to detect threats faster. AI is changing the harder part: how much time defenders have left to act. Advanced AI models can now help attackers discover vulnerabilities, generate exploit code, and move through weaknesses faster than traditional security processes were built to handle. The challenge is no longer just finding another vulnerability or",
-      "title_fr": "Webinaire : Comment intégrer la préparation aux menaces de l'IA dans vos opérations de sécurité",
-      "summary_fr": "Les équipes de sécurité ont passé des années à essayer de détecter les menaces plus rapidement. L'IA modifie la partie la plus difficile : le temps dont disposent les défenseurs pour agir. Les modèles d'IA avancés peuvent désormais aider les attaquants à découvrir des vulnérabilités, à générer du code d'exploitation et à exploiter les faiblesses plus rapidement que les processus de sécurité traditionnels ne sont conçus pour le gérer.",
-      "published": "Thu, 29 Oct 2026 17:09:41 +0530"
+      "title": "Why Urgent Security Fixes Aren't Fixed. Observe, Prove, Act, Confirm Gets Them Moving",
+      "url": "https://thehackernews.com/2026/10/why-urgent-security-fixes-arent-fixed.html",
+      "summary": "The alert is critical. The fix is known. And the ticket sits in a queue for days. Security teams understand the risk, but the people who keep applications available need proof that the change won’t break anything. Their concerns are practical. An IPS protection could block legitimate traffic. A configuration change could interrupt a service. An endpoint policy could affect an application",
+      "title_fr": "Pourquoi les correctifs de sécurité urgents ne sont pas appliqués. Observer, Prouver, Agir, Confirmer les fait avancer",
+      "summary_fr": "L'alerte est critique et le correctif est connu, mais le ticket reste en attente pendant des jours. Les équipes de sécurité comprennent le risque, mais les responsables de la disponibilité des applications ont besoin de preuves que le changement n'entraînera pas de dysfonctionnement.",
+      "published": "Fri, 30 Oct 2026 17:28:53 +0530"
     },
     {
-      "title": "Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls",
-      "url": "https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html",
-      "summary": "A flaw in Telegram for Android allowed an attacker to run code on a victim's phone via a voice call once the victim answered, according to security startup NebuSec. The attacker needed only an ordinary Telegram account. Telegram fixed the flaw in version 12.10.4 of the app, released in late September, and NebuSec disclosed it on October 29. The flaw can be triggered in every version from",
-      "title_fr": "Une faille Android de Telegram permet aux attaquants d'exécuter du code lorsque les utilisateurs répondent à des appels vocaux",
-      "summary_fr": "Une faille dans Telegram pour Android permettait à un attaquant d'exécuter du code sur le téléphone d'une victime via un appel vocal une fois que la victime avait répondu. L'attaquant n'avait besoin que d'un compte Telegram ordinaire. Telegram a corrigé la faille dans la version 12.10.4 de l'application, publiée fin septembre, et NebuSec l'a divulguée le 29 octobre.",
-      "published": "Thu, 29 Oct 2026 17:09:18 +0530"
+      "title": "Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in Prison",
+      "url": "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html",
+      "summary": "Ahmad Umar Agha, a Syrian Electronic Army hacker known online as \"Th3Pr0,\" has been sentenced by a U.S. federal court to 42 months in prison for his role in a hacking conspiracy that targeted Western news outlets. The conspiracy was organized and led by members of former Syrian President Bashar al-Assad's inner circle, including the commander of Syria's General Intelligence",
+      "title_fr": "Un hacker syrien derrière un faux tweet ayant provoqué une chute du marché de 136 milliards de dollars écope de 42 mois de prison",
+      "summary_fr": "Ahmad Umar Agha, un hacker de l'Armée électronique syrienne connu sous le nom de \"Th3Pr0\", a été condamné par un tribunal fédéral américain à 42 mois de prison. Il a été reconnu coupable de son rôle dans une conspiration de piratage ciblant des médias occidentaux, organisée par l'entourage de l'ancien président syrien Bachar al-Assad.",
+      "published": "Fri, 30 Oct 2026 16:10:45 +0530"
     }
   ],
-  "script": "Bienvenue à votre Flash Info Cyber. Aujourd'hui, nous abordons les dernières avancées et menaces en matière de cybersécurité. Google a récemment présenté Gemini 4 Carbon, un modèle d'intelligence artificielle qui marque un tournant. Il surpasse ses concurrents dans la détection, l'exploitation et la correction des vulnérabilités, démontrant des capacités impressionnantes pour renforcer nos défenses numériques. Cette innovation promet de transformer la manière dont nous abordons la cybersécurité. L'intelligence artificielle, justement, est au cœur des préoccupations. Des experts soulignent que l'IA ne se contente plus d'accélérer la détection des menaces, mais qu'elle peut aussi être utilisée par les attaquants pour trouver des failles et créer des codes malveillants à une vitesse inédite. Il est donc crucial pour les équipes de sécurité d'intégrer la préparation aux menaces basées sur l'IA dans leurs stratégies pour ne pas être dépassées. Enfin, une vulnérabilité critique a été découverte dans l'application Telegram pour Android. Un attaquant pouvait exécuter du code à distance sur le téléphone d'une victime simplement en répondant à un appel vocal. Heureusement, cette faille a été corrigée par Telegram dans une mise à jour récente. Vérifiez bien que votre application est à jour. Restez vigilants.",
+  "script": "Bonjour et bienvenue dans votre Flash Info Cyber. Aujourd'hui, la vigilance est de mise pour les utilisateurs de portefeuilles de cryptomonnaies. Le fabricant Trezor a lancé une alerte importante : un de ses portefeuilles, vendu par le revendeur CryptoBilis, contiendrait un composant malveillant. Ce dernier serait capable de subtiliser votre phrase de récupération, mettant ainsi vos fonds en danger. Trezor recommande vivement à tous ceux ayant acheté un appareil chez CryptoBilis depuis mars 2026 de transférer immédiatement leurs actifs vers un nouveau portefeuille avec une phrase de récupération fraîche. Une situation qui souligne l'importance de la chaîne d'approvisionnement en matière de sécurité numérique.\n\nNous abordons ensuite un problème récurrent dans les entreprises : la difficulté à appliquer rapidement les correctifs de sécurité urgents. Malgré la connaissance des risques et l'existence de solutions, les mises à jour cruciales sont souvent retardées. La raison principale ? Les équipes chargées de la disponibilité des applications exigent des preuves concrètes que ces correctifs n'entraîneront pas de dysfonctionnements. Un défi de communication et de confiance qui freine l'efficacité de la cybersécurité.\n\nEnfin, la justice américaine a rendu son verdict dans une affaire de piratage retentissante. Un hacker syrien, connu sous le pseudonyme « Th3Pr0 », a été condamné à 42 mois de prison. Il était impliqué dans un complot visant des médias occidentaux, et notamment un faux tweet qui avait provoqué une chute spectaculaire de 136 milliards de dollars sur les marchés financiers. Une peine qui rappelle les graves conséquences des cyberattaques et la détermination à poursuivre leurs auteurs.\n\nC'était votre Flash Info Cyber. Restez vigilants. À très bientôt.",
   "audio_file": "audio/latest_briefing.mp3",
-  "audio_bytes": 619624,
+  "audio_bytes": 838008,
   "ai_providers": {
     "translation": "gemini:gemini-2.5-flash",
     "script": "gemini:gemini-2.5-flash"
