@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-10-30T14:42:54+00:00",
+  "generated_at": "2026-10-31T14:04:33+00:00",
   "source": {
     "name": "The Hacker News",
     "url": "https://thehackernews.com",
@@ -8,33 +8,33 @@
   },
   "articles": [
     {
-      "title": "Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis",
-      "url": "https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html",
-      "summary": "A Trezor Safe 5 hardware wallet bought from the reseller CryptoBilis has an extra circuit board that sends out the recovery phrase over a mobile network, a customer has reported. Trezor has not yet examined the device. It is telling everyone who bought a Trezor from CryptoBilis since March 2026 to move their funds to a new wallet with a new recovery phrase. Trezor said in a blog post",
-      "title_fr": "Trezor alerte sur un implant matériel suspecté dans l'un de ses portefeuilles vendus par CryptoBilis",
-      "summary_fr": "Un portefeuille matériel Trezor Safe 5 acheté chez le revendeur CryptoBilis contiendrait une carte de circuit imprimé supplémentaire qui transmet la phrase de récupération via un réseau mobile, selon un client. Trezor, qui n'a pas encore examiné l'appareil, conseille à tous ceux qui ont acheté un Trezor auprès de CryptoBilis depuis mars 2026 de transférer leurs fonds vers un nouveau portefeuille avec une nouvelle phrase de récupération.",
-      "published": "Fri, 30 Oct 2026 17:51:56 +0530"
+      "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
+      "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+      "summary": "American blockchain analysis firm Chainalysis said it was the target of a cybersecurity incident in which an external actor accessed non-sensitive customer data. However, the company noted that the breach did not result in unauthorized access to its investigation content, authentication credentials, or session tokens. \"This month, Chainalysis detected an external actor using offensive agentic",
+      "title_fr": "Chainalysis confirme une intrusion dans ses outils internes et l'exposition de données d'identité client",
+      "summary_fr": "La société américaine d'analyse de blockchain Chainalysis a déclaré avoir été la cible d'un incident de cybersécurité au cours duquel un acteur externe a accédé à des données client non sensibles. Cependant, l'entreprise a noté que la violation n'avait pas entraîné d'accès non autorisé à son contenu d'enquête, à ses identifiants d'authentification ou à ses jetons de session.",
+      "published": "Sat, 31 Oct 2026 17:31:56 +0530"
     },
     {
-      "title": "Why Urgent Security Fixes Aren't Fixed. Observe, Prove, Act, Confirm Gets Them Moving",
-      "url": "https://thehackernews.com/2026/10/why-urgent-security-fixes-arent-fixed.html",
-      "summary": "The alert is critical. The fix is known. And the ticket sits in a queue for days. Security teams understand the risk, but the people who keep applications available need proof that the change won’t break anything. Their concerns are practical. An IPS protection could block legitimate traffic. A configuration change could interrupt a service. An endpoint policy could affect an application",
-      "title_fr": "Pourquoi les correctifs de sécurité urgents ne sont pas appliqués. Observer, Prouver, Agir, Confirmer les fait avancer",
-      "summary_fr": "L'alerte est critique et le correctif est connu, mais le ticket reste en attente pendant des jours. Les équipes de sécurité comprennent le risque, mais les responsables de la disponibilité des applications ont besoin de preuves que le changement n'entraînera pas de dysfonctionnement.",
-      "published": "Fri, 30 Oct 2026 17:28:53 +0530"
+      "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+      "url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploited Vulnerabilities (KEV) catalog, following active exploitation in the wild. The vulnerabilities are listed below - CVE-2026-111357 (CVSS score: 8.8) - A missing authentication for a critical function vulnerability that could allow a",
+      "title_fr": "Les attaquants enchaînent trois failles Ivanti Connect Secure pour obtenir un accès root non authentifié",
+      "summary_fr": "La Cybersecurity and Infrastructure Security Agency (CISA) des États-Unis a ajouté vendredi deux failles de sécurité affectant Ivanti Connect Secure (ICS) à son catalogue des vulnérabilités connues exploitées (KEV), suite à leur exploitation active. Les vulnérabilités sont listées ci-dessous : CVE-2026-111357 (score CVSS : 8.8) – Une vulnérabilité de fonction critique sans authentification qui pourrait permettre un accès non autorisé.",
+      "published": "Sat, 31 Oct 2026 13:57:43 +0530"
     },
     {
-      "title": "Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in Prison",
-      "url": "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html",
-      "summary": "Ahmad Umar Agha, a Syrian Electronic Army hacker known online as \"Th3Pr0,\" has been sentenced by a U.S. federal court to 42 months in prison for his role in a hacking conspiracy that targeted Western news outlets. The conspiracy was organized and led by members of former Syrian President Bashar al-Assad's inner circle, including the commander of Syria's General Intelligence",
-      "title_fr": "Un hacker syrien derrière un faux tweet ayant provoqué une chute du marché de 136 milliards de dollars écope de 42 mois de prison",
-      "summary_fr": "Ahmad Umar Agha, un hacker de l'Armée électronique syrienne connu sous le nom de \"Th3Pr0\", a été condamné par un tribunal fédéral américain à 42 mois de prison. Il a été reconnu coupable de son rôle dans une conspiration de piratage ciblant des médias occidentaux, organisée par l'entourage de l'ancien président syrien Bachar al-Assad.",
-      "published": "Fri, 30 Oct 2026 16:10:45 +0530"
+      "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+      "url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+      "summary": "A malicious ChatGPT share link could run an attacker's code in the logged-in session of anyone who opened it, allowing them to read their private conversations, researchers at the security firm Parameter showed. The researchers reported the flaw through OpenAI's bug bounty program on October 18, and OpenAI fixed it eight days later and rated it P1, its most serious category.",
+      "title_fr": "Un lien ChatGPT partagé pourrait exécuter le code d'un attaquant dans votre session et lire les discussions privées",
+      "summary_fr": "Un lien de partage ChatGPT malveillant pourrait exécuter le code d'un attaquant dans la session connectée de quiconque l'ouvrait, leur permettant de lire leurs conversations privées, ont montré des chercheurs de la firme de sécurité Parameter. Les chercheurs ont signalé la faille via le programme de primes aux bogues d'OpenAI le 18 octobre, et OpenAI l'a corrigée huit jours plus tard et l'a classée P1, sa catégorie la plus grave.",
+      "published": "Sat, 31 Oct 2026 11:03:41 +0530"
     }
   ],
-  "script": "Bonjour et bienvenue dans votre Flash Info Cyber. Aujourd'hui, la vigilance est de mise pour les utilisateurs de portefeuilles de cryptomonnaies. Le fabricant Trezor a lancé une alerte importante : un de ses portefeuilles, vendu par le revendeur CryptoBilis, contiendrait un composant malveillant. Ce dernier serait capable de subtiliser votre phrase de récupération, mettant ainsi vos fonds en danger. Trezor recommande vivement à tous ceux ayant acheté un appareil chez CryptoBilis depuis mars 2026 de transférer immédiatement leurs actifs vers un nouveau portefeuille avec une phrase de récupération fraîche. Une situation qui souligne l'importance de la chaîne d'approvisionnement en matière de sécurité numérique.\n\nNous abordons ensuite un problème récurrent dans les entreprises : la difficulté à appliquer rapidement les correctifs de sécurité urgents. Malgré la connaissance des risques et l'existence de solutions, les mises à jour cruciales sont souvent retardées. La raison principale ? Les équipes chargées de la disponibilité des applications exigent des preuves concrètes que ces correctifs n'entraîneront pas de dysfonctionnements. Un défi de communication et de confiance qui freine l'efficacité de la cybersécurité.\n\nEnfin, la justice américaine a rendu son verdict dans une affaire de piratage retentissante. Un hacker syrien, connu sous le pseudonyme « Th3Pr0 », a été condamné à 42 mois de prison. Il était impliqué dans un complot visant des médias occidentaux, et notamment un faux tweet qui avait provoqué une chute spectaculaire de 136 milliards de dollars sur les marchés financiers. Une peine qui rappelle les graves conséquences des cyberattaques et la détermination à poursuivre leurs auteurs.\n\nC'était votre Flash Info Cyber. Restez vigilants. À très bientôt.",
+  "script": "Flash Info Cyber, bonjour. Au sommaire de ce bulletin, des données clients exposées chez Chainalysis, de nouvelles failles critiques chez Ivanti, et une vulnérabilité inquiétante concernant les liens de partage ChatGPT. Commençons par Chainalysis. La société d'analyse de blockchain a récemment confirmé avoir été victime d'une intrusion. Un acteur externe a pu accéder à des informations d'identité client, bien que l'entreprise assure que le contenu de ses enquêtes n'a pas été compromis. Une alerte à prendre au sérieux pour les utilisateurs concernés. Passons ensuite aux équipements Ivanti. L'agence américaine CISA a alerté sur l'exploitation active de nouvelles failles de sécurité. Ces vulnérabilités, jugées critiques, pourraient permettre à des attaquants d'obtenir un accès non authentifié aux systèmes. Les utilisateurs d'Ivanti Connect Secure sont donc invités à la plus grande vigilance et à appliquer les correctifs sans délai. Enfin, une mise en garde pour les utilisateurs de ChatGPT. Des chercheurs en sécurité ont découvert qu'un lien de partage malveillant pouvait permettre l'exécution de code arbitraire dans la session d'un utilisateur, donnant potentiellement accès à ses conversations privées. OpenAI a depuis corrigé cette faille, mais cela souligne l'importance de la prudence face aux liens partagés. C'était Flash Info Cyber. Restez vigilants. À bientôt.",
   "audio_file": "audio/latest_briefing.mp3",
-  "audio_bytes": 838008,
+  "audio_bytes": 662674,
   "ai_providers": {
     "translation": "gemini:gemini-2.5-flash",
     "script": "gemini:gemini-2.5-flash"
