@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-11-02T17:36:02+00:00",
+  "generated_at": "2026-11-04T15:53:00+00:00",
   "source": {
     "name": "The Hacker News",
     "url": "https://thehackernews.com",
@@ -8,33 +8,33 @@
   },
   "articles": [
     {
-      "title": "Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access",
-      "url": "https://thehackernews.com/2026/11/google-disrupts-13-million-device.html",
-      "summary": "A botnet of more than 1.3 million Android devices, mostly TV set-top boxes, lost control of its servers in late October in a takedown led by Google. Google says it is highly confident that device maker Videostrong intentionally put a backdoor in the boxes and sold access to criminals. They used the boxes for ad fraud and to pass other people's internet traffic through owners' home",
-      "title_fr": "Google Démantèle un Botnet Android de 1,3 Million d'Appareils, le Fabricant de Boîtiers TV Accusé d'Avoir Vendu l'Accès aux Criminels",
-      "summary_fr": "Un botnet de plus de 1,3 million d'appareils Android, principalement des décodeurs TV, a perdu le contrôle de ses serveurs fin octobre lors d'une opération menée par Google. Google affirme être très confiant que le fabricant d'appareils Videostrong a intentionnellement intégré une porte dérobée dans les boîtiers et vendu l'accès à des criminels, qui les utilisaient pour la fraude publicitaire et pour acheminer le trafic internet d'autres personnes via les domiciles des propriétaires.",
-      "published": "Mon, 02 Nov 2026 21:20:26 +0530"
+      "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
+      "url": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
+      "summary": "The Russia-linked threat actor known as APT29 is said to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain attack involving a Ukrainian web analytics service called Plerdy SEO Tracker. \"The injected JavaScript code collects browser and device attributes,\" Sekoia researchers Amaury-Jacques Garçon and",
+      "title_fr": "Des hackers liés à APT29 détournent un script d'analyse web pour distribuer des exploits iOS et Android",
+      "summary_fr": "L'acteur de menace lié à la Russie, connu sous le nom d'APT29, serait derrière une campagne d'attaque par point d'eau à grande échelle ciblant les utilisateurs d'iOS et d'Android. Cette campagne utilise des sites web compromis, de faux domaines et une attaque de la chaîne d'approvisionnement impliquant un service d'analyse web ukrainien appelé Plerdy SEO Tracker.",
+      "published": "Wed, 04 Nov 2026 19:57:52 +0530"
     },
     {
-      "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
-      "url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
-      "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign targeting Israel and the Kurdistan Region of Iraq by an Iran state-aligned threat actor between August and October 2026. According to a report published by Dream Research Labs, the campaign has led to the compromise of a high-profile individual in Israel, along with additional compromises affecting a government cloud",
-      "title_fr": "DarkBlinders Compromettent une Cible Israélienne et l'Environnement Cloud du Gouvernement Kurde Irakien",
-      "summary_fr": "Des chercheurs en cybersécurité ont révélé les détails d'une campagne de cyberespionnage ciblant Israël et la région du Kurdistan irakien par un acteur de menace aligné sur l'État iranien entre août et octobre 2026. Selon un rapport de Dream Research Labs, la campagne a entraîné le compromis d'une personnalité de haut rang en Israël, ainsi que des compromissions supplémentaires affectant un environnement cloud gouvernemental.",
-      "published": "Mon, 02 Nov 2026 20:16:05 +0530"
+      "title": "Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads",
+      "url": "https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html",
+      "summary": "A critical flaw in Ruby on Rails could allow an unauthenticated attacker to write arbitrary files on an app's server by uploading a crafted file if the app processes uploads using ImageMagick. The Rails project disclosed the flaw in an advisory and fixed it in versions 8.1.4.1 and 8.0.5.2. The flaw is in Active Storage, the part of Rails that handles file uploads. Some apps store",
+      "title_fr": "Une faille critique dans Rails permet aux attaquants d'écrire des fichiers sur le serveur via des téléchargements ImageMagick modifiés",
+      "summary_fr": "Une faille critique dans Ruby on Rails pourrait permettre à un attaquant non authentifié d'écrire des fichiers arbitraires sur le serveur d'une application en téléchargeant un fichier spécialement conçu si l'application traite les téléchargements à l'aide d'ImageMagick. Le projet Rails a divulgué cette faille et l'a corrigée dans les versions 8.1.4.1 et 8.0.5.2.",
+      "published": "Wed, 04 Nov 2026 17:37:04 +0530"
     },
     {
-      "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
-      "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
-      "summary": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week. Langflow is an open-source tool for building AI agents and workflows, and its vulnerability reports go to IBM. Every release from 1.0.0 through 1.12.8 has the flaws, and the only fix is version 1.13.0. Neither flaw is in CISA's Known",
-      "title_fr": "Des Failles Critiques dans Langflow Pourraient Permettre à des Attaquants Non Authentifiés d'Exécuter du Code sur les Serveurs",
-      "summary_fr": "Deux failles critiques dans Langflow pourraient permettre à un attaquant distant sans compte de contourner l'authentification ou d'exécuter du code arbitraire, a déclaré IBM la semaine dernière. Langflow est un outil open source pour la création d'agents et de flux de travail IA, et ses rapports de vulnérabilité sont transmis à IBM. Toutes les versions de 1.0.0 à 1.12.8 présentent ces failles, et la seule solution est la version 1.13.0.",
-      "published": "Mon, 02 Nov 2026 17:20:00 +0530"
+      "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory",
+      "url": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
+      "summary": "Two flaws in the Xen hypervisor allow a malicious guest virtual machine (VM) to read and write the memory of other VMs on the same host, including dom0. Dom0 is the VM that, by default, has full permissions and manages the others. Patches are out, and there is no known mitigation, the Xen Project said in an advisory on November 3. All Xen versions from 4.6 onward are vulnerable,",
+      "title_fr": "Des failles dans l'hyperviseur Xen permettent à une VM malveillante de lire et d'écrire la mémoire de toute autre VM",
+      "summary_fr": "Deux failles dans l'hyperviseur Xen permettent à une machine virtuelle (VM) invitée malveillante de lire et d'écrire la mémoire d'autres VM sur le même hôte, y compris dom0. Des correctifs sont disponibles et il n'existe aucune atténuation connue, selon le projet Xen.",
+      "published": "Wed, 04 Nov 2026 17:16:27 +0530"
     }
   ],
-  "script": "Flash Info Cyber, bonjour à tous. Aujourd'hui, nous faisons le point sur les dernières menaces numériques. Premièrement, Google a récemment neutralisé un vaste réseau de robots malveillants, ou botnet, impactant plus d'un million trois cent mille appareils Android. Il semblerait qu'un fabricant de boîtiers TV ait délibérément intégré une porte dérobée, permettant à des cybercriminels de détourner ces appareils pour de la fraude publicitaire et du trafic internet illicite. Restons ensuite au Moyen-Orient, où une campagne de cyberespionnage a été déjouée. Des chercheurs ont révélé qu'un acteur aligné sur l'État iranien a ciblé des personnalités israéliennes de haut rang et compromis l'environnement cloud du gouvernement kurde irakien. Cette opération, menée entre août et octobre, met en lumière la persistance des menaces géopolitiques dans le cyberespace. Enfin, une mise en garde importante concernant Langflow, un outil open source très utilisé pour l'intelligence artificielle. Des failles critiques ont été découvertes, permettant à des attaquants non authentifiés d'exécuter du code à distance sur les serveurs. La seule solution est de mettre à jour vers la version 1.13.0, car toutes les versions précédentes sont vulnérables. Restez vigilants et à très bientôt pour un nouveau point sur l'actualité cyber.",
+  "script": "Bonjour et bienvenue à votre Flash Info Cyber. Restez connectés pour les dernières alertes en matière de sécurité numérique. On commence avec une nouvelle campagne d'attaque d'envergure. Le groupe de hackers APT29, soupçonné d'être lié à la Russie, utiliserait des sites web compromis et de faux domaines pour distribuer des logiciels malveillants ciblant spécifiquement les utilisateurs d'appareils iOS et Android. Ils auraient notamment détourné un service d'analyse web ukrainien pour propager leurs exploits. Ensuite, une vulnérabilité sérieuse a été découverte dans le framework Ruby on Rails. Cette faille critique pourrait permettre à un attaquant de charger des fichiers spécialement conçus et d'écrire des données arbitraires sur le serveur d'une application, si celle-ci utilise le logiciel ImageMagick pour traiter les téléchargements. Des correctifs ont heureusement été publiés par le projet Rails. Enfin, des chercheurs ont mis en lumière deux failles importantes dans l'hyperviseur Xen. Ces vulnérabilités permettraient à une machine virtuelle malveillante de lire et d'écrire dans la mémoire d'autres machines virtuelles fonctionnant sur le même hôte, y compris le domaine principal. Des correctifs sont désormais disponibles pour adresser ces risques. Restez vigilants.",
   "audio_file": "audio/latest_briefing.mp3",
-  "audio_bytes": 630491,
+  "audio_bytes": 585978,
   "ai_providers": {
     "translation": "gemini:gemini-2.5-flash",
     "script": "gemini:gemini-2.5-flash"
